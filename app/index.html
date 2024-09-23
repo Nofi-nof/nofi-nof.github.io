@@ -5,17 +5,61 @@
         <title>Nofi</title>
         <link rel="stylesheet" href="../style/stylesheet.css">
         <style>
+            .container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
             .niche{
-                height: 300px;
-                width: 200px;
+                height: 900px;
+                width: 900px;
+                background-color: #fff4e3;
                 border: solid; 
-                border-radius: 24px;
+                border-color: #fff4e3;
+                border-radius: 400px 400px 0 0;
+                box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
+            }
+            .sns-container{
+                display: flex;
+                justify-content: center;
+            }
+            .sns-x{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+                width: 100px;
+                border: none;
+                border-radius: 50px;
+                background-color: black;
+            }
+            .sns-zenn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+                width: 100px;
+                border: none;
+                border-radius: 50px;
+                background-color: white;
             }
         </style>
     </head>
     <body>
-        <img src="../img/nekoPC.PNG" height="300px" width="200px">
-        <h1>ポートフォリオを作りたい</h1>
-        <div class="niche"></div>
+        <div class="container">
+            <img src="../img/nekoPC.PNG" height="540px" width="450px">
+            <div class="niche">
+                <div class="sns-container">
+                    <div class="sns-x">
+                        <a href="https://twitter.com/Jing_Nofi">
+                        <img src="../img/x-logo-white.png" height="50px" width="50px">
+                    </div>
+                    <div class="sns-zenn">
+                        <a href="https://zenn.dev/nofi">
+                        <img src="../img/zenn-logo-only.svg" height="50px" width="50px">
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
