@@ -12,8 +12,7 @@
       }
       .niche {
         display: flex;
-        justify-content: center;
-        align-items: last baseline;
+        flex-direction: column;
         height: 900px;
         width: 900px;
         background-color: #fff4e3;
@@ -23,6 +22,11 @@
         box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5),
           inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
         padding-top: 100px;
+      }
+      .top-shelf {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       .sns-container {
         display: flex;
@@ -53,21 +57,20 @@
         display: flex;
         justify-content: center;
       }
-      .timeline-line {
-        border: solid;
-        height: 800px;
-        width: 0;
-      }
-      .timeline-event {
-        display: flex;
-        flex-direction: column;
+      .timeline-detail {
+        align-items: center;
+        height: 100px;
+        width: 100px;
+        border: none;
+        border-radius: 50px;
+        background-color: white;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="niche">
-        <div>
+        <div class="top-shelf">
           <img src="../img/nekoPC.PNG" height="300px" width="250px" />
           <div class="sns-container">
             <div class="sns-black">
@@ -96,52 +99,16 @@
           </div>
         </div>
         <div class="timeline-container">
-          <div class="timeline-line"></div>
-          <div class="timeline-event">
-            <div>
-              <p class="timeline-date">2022年3月</p>
-              <p class="timeline-title">
-                <span>九州産業大学 卒業</span>
-              </p>
-              <p class="timeline-detail">
-                <span>取得資格、修了課程</span>
-                <span
-                  >国内旅行業務管理者<br />中学校、高等学校の教諭一種免許状（国語）<br />日本語教員養成課程</span
-                >
-              </p>
-            </div>
-            <div>
-              <p class="timeline-date">2022年4月</p>
-              <p class="timeline-title">
-                <span>IT企業に入社し、プログラマとして働く</span>
-              </p>
-              <p class="timeline-detail">
-                <span>取得資格</span>
-                <span
-                  >Oracle Certified Java Programmer, Silver SE 11<br />ORACLE
-                  MASTER Silver SQL</span
-                >
-              </p>
-            </div>
-            <div>
-              <p class="timeline-date">2022年11月</p>
-              <p class="timeline-title">
-                <span>退職</span>
-              </p>
-              <p class="timeline-detail">
-                <span>引っ越し、子育てのため退職</span>
-              </p>
-            </div>
-            <div>
-              <p class="timeline-date">2023年以降</p>
-              <p class="timeline-title">
-                <span>現在</span>
-              </p>
-              <p class="timeline-detail">
-                <span></span>
-              </p>
-            </div>
-          </div>
+          <p class="timeline-detail">国内旅行業務管理者</p>
+          <p class="timeline-detail">
+            中学校、高等学校の教諭一種免許状（国語）
+          </p>
+          <p class="timeline-detail">日本語教員養成課程</p>
+          <p class="timeline-detail">
+            Oracle Certified Java Programmer, Silver SE 11
+          </p>
+          <p class="timeline-detail">ORACLE MASTER Silver SQL</p>
+          <p class="timeline-detail">子育て中</p>
         </div>
       </div>
     </div>
