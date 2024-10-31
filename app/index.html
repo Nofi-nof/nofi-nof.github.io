@@ -4,114 +4,139 @@
     <meta charset="UTF-8" />
     <title>Nofi</title>
     <link rel="stylesheet" href="../style/stylesheet.css" />
-    <script src="./script.js"></script>
     <style>
       .container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        margin: 0 auto;
       }
-      .niche {
-        display: flex;
-        flex-direction: column;
-        height: 900px;
-        width: 900px;
-        background-color: #fff4e3;
-        border: solid;
-        border-color: #fff4e3;
-        border-radius: 400px 400px 0 0;
-        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5),
-          inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
-        padding-top: 100px;
+      .yukiwa-container {
+        position: relative;
+        left: 50px;
+        width: 500px;
       }
-      .top-shelf {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .sns-container {
-        display: flex;
-        justify-content: center;
-        column-gap: 10px;
-      }
-      .sns-black {
+      .yukiwa-color {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100px;
-        width: 100px;
-        border: none;
-        border-radius: 50px;
-        background-color: black;
+        background-image: url(../img/yukiwa_illust_color_svg.svg);
+        background-size: contain;
       }
-      .sns-white {
+      .yukiwa-line {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100px;
-        width: 100px;
-        border: none;
-        border-radius: 50px;
-        background-color: white;
+        background-image: url(../img/yukiwa_illust_line_svg.svg);
+        background-size: contain;
       }
-      .timeline-container {
+      .yukiwa-color-line {
         display: flex;
         justify-content: center;
-      }
-      .timeline-detail {
         align-items: center;
-        height: 100px;
-        width: 100px;
-        border: none;
-        border-radius: 50px;
-        background-color: white;
+        background-image: url(../img/yukiwa_illust_color_line_svg.svg);
+        background-size: contain;
+      }
+      .small {
+        height: 120px;
+        width: 120px;
+        z-index: 0;
+      }
+      .medium {
+        height: 150px;
+        width: 150px;
+        z-index: 2;
+      }
+      .large {
+        height: 280px;
+        width: 280px;
+        z-index: 1;
+      }
+      .yukiwa-neko {
+        position: absolute;
+        left: 50px;
+      }
+      .yukiwa-x {
+        position: absolute;
+        top: 225px;
+        left: 210px;
+      }
+      .yukiwa-middle1 {
+        position: absolute;
+        top: 300px;
+        left: 138px;
+      }
+      .yukiwa-zenn {
+        position: absolute;
+        top: 380px;
+        left: 20px;
+      }
+      .yukiwa-middle2 {
+        position: absolute;
+        top: 470px;
+        left: 85px;
+      }
+      .yukiwa-github {
+        position: absolute;
+        top: 540px;
+        left: 170px;
+      }
+      .article {
+      }
+      .article-link {
+        text-decoration: none;
+      }
+      .title {
+        writing-mode: vertical-rl;
+        margin-left: 100px;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="niche">
-        <div class="top-shelf">
-          <img src="../img/nekoPC.PNG" height="300px" width="250px" />
-          <div class="sns-container">
-            <div class="sns-black">
-              <a href="https://twitter.com/Jing_Nofi">
-                <img src="../img/x-logo-white.png" height="50px" width="50px" />
-              </a>
-            </div>
-            <div class="sns-white">
-              <a href="https://zenn.dev/nofi">
-                <img
-                  src="../img/zenn-logo-only.svg"
-                  height="50px"
-                  width="50px"
-                />
-              </a>
-            </div>
-            <div class="sns-black">
-              <a href="https://github.com/Nofi-nof">
-                <img
-                  src="../img/github-mark-white.svg"
-                  height="50px"
-                  width="50px"
-                />
-              </a>
-            </div>
-          </div>
+      <div class="article">
+        <p>活動</p>
+        <a
+          class="article-link"
+          href="https://zenn.dev/nofi/articles/242dfa8d819e35"
+          ><p>RemixにFlowbiteを導入してみた</p></a
+        >
+        <a
+          class="article-link"
+          href="https://zenn.dev/nofi/articles/3983b1aabdc1ab"
+          ><p>FirestoreでGROUP BYを実現するObject.groupBy</p></a
+        >
+        <a
+          class="article-link"
+          href="https://zenn.dev/nofi/articles/da2c6bb0f2a4d1"
+          ><p>道に迷いつつもなんとかFirestoreに入門しました!</p></a
+        >
+      </div>
+      <div class="yukiwa-container">
+        <div class="yukiwa-color large yukiwa-neko">
+          <img src="../img/nekoPC.PNG" height="200px" width="170px" />
         </div>
-        <div class="timeline-container">
-          <p class="timeline-detail">国内旅行業務管理者</p>
-          <p class="timeline-detail">
-            中学校、高等学校の教諭一種免許状（国語）
-          </p>
-          <p class="timeline-detail">日本語教員養成課程</p>
-          <p class="timeline-detail">
-            Oracle Certified Java Programmer, Silver SE 11
-          </p>
-          <p class="timeline-detail">ORACLE MASTER Silver SQL</p>
-          <p class="timeline-detail">子育て中</p>
+        <div class="yukiwa-color-line medium yukiwa-x">
+          <a href="https://twitter.com/Jing_Nofi">
+            <img src="../img/x-logo-white.png" height="50px" width="50px" />
+          </a>
+        </div>
+        <div class="yukiwa-line small yukiwa-middle1"></div>
+        <div class="yukiwa-line medium yukiwa-zenn">
+          <a href="https://zenn.dev/nofi">
+            <img src="../img/zenn-logo-only.svg" height="50px" width="50px" />
+          </a>
+        </div>
+        <div class="yukiwa-color small yukiwa-middle2"></div>
+        <div class="yukiwa-color-line medium yukiwa-github">
+          <a href="https://github.com/Nofi-nof">
+            <img
+              src="../img/github-mark-white.svg"
+              height="50px"
+              width="50px"
+            />
+          </a>
         </div>
       </div>
+      <p class="title">のふぃ</p>
     </div>
   </body>
 </html>
