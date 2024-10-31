@@ -1,6 +1,0 @@
-{
-  "scripts": {
-    "dev": "remix dev",
-    "build": "remix build"
-  }
-}
