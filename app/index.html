@@ -20,12 +20,30 @@
         display: grid;
         grid-auto-columns: 1fr;
         grid-auto-flow: column;
+        padding: 3% 10% 5%;
       }
       .name-article-container {
         display: grid;
         grid-template-columns: 1fr;
         gap: 3%;
-        padding-top: 10%;
+        padding: 50px 0;
+        width: 100%;
+        height: auto;
+      }
+      .name {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 20px;
+        color: #666666;
+      }
+      .name-container {
+        display: grid;
+        justify-content: center;
+        width: 300px;
+      }
+      .heading {
+        color: #666666;
       }
       .article-container {
         display: grid;
@@ -49,23 +67,12 @@
         margin: 0;
         font-size: 14px;
       }
-      .name {
-        display: flex;
-        align-items: end;
-        justify-content: center;
-        width: 100%;
-        font-size: 20px;
-        color: #666666;
-      }
-      .name-container {
-        display: grid;
-        justify-content: center;
-        width: 100%;
-      }
+
       .yukiwa-container {
         position: relative;
         left: 50px;
-        width: 300px;
+        width: 250px;
+        height: 650px;
       }
       .yukiwa-color {
         width: 100%;
@@ -93,6 +100,10 @@
         background-image: url(../img/yukiwa_illust_color_line_svg.svg);
         background-size: contain;
         background-repeat: no-repeat;
+      }
+      .x-small {
+        height: 90px;
+        width: 90px;
       }
       .small {
         height: 120px;
@@ -138,72 +149,18 @@
         top: 540px;
         left: 170px;
       }
-      .logo-small {
-        height: "30px";
-        width: "30px";
-      }
-      .logo-mediun {
-        height: "50px";
-        width: "50px";
-      }
-      .logo-large {
-        height: "200px";
-        width: "170px";
-      }
       @media screen and (max-width: 480px) {
         /* 480pxまでの幅の場合に適応される スマホ用*/
         .container {
           display: flex;
           flex-direction: column-reverse;
+          gap: 50px;
         }
         .yukiwa-container {
           position: relative;
           width: 250px;
           height: 650px;
-        }
-        .small {
-          height: 80px;
-          width: 80px;
-          z-index: 0;
-        }
-        .medium {
-          height: 110px;
-          width: 110px;
-          z-index: 2;
-        }
-        .large {
-          height: 240px;
-          width: 240px;
-          z-index: 1;
-        }
-        .yukiwa-neko {
-          position: absolute;
-          left: 30px;
-        }
-        .yukiwa-x {
-          position: absolute;
-          top: 195px;
-          left: 185px;
-        }
-        .yukiwa-bluesky {
-          position: absolute;
-          top: 270px;
-          left: 138px;
-        }
-        .yukiwa-zenn {
-          position: absolute;
-          top: 330px;
-          left: 30px;
-        }
-        .yukiwa-middle2 {
-          position: absolute;
-          top: 405px;
-          left: 85px;
-        }
-        .yukiwa-github {
-          position: absolute;
-          top: 495px;
-          left: 140px;
+          left: -45px;
         }
       }
     </style>
@@ -216,10 +173,10 @@
             <p class="name">のふぃ</p>
           </div>
         </div>
-        <div class="article-container" id="article-container">
-          <div class="yukiwa-color small">
-            <p>活動</p>
-          </div>
+        <div class="yukiwa-color x-small">
+          <p>活動</p>
+        </div>
+        <div class="article-container">
           <article class="article">
             <div>
               <img src="../img/zenn-logo-only.svg" height="30px" width="30px" />
