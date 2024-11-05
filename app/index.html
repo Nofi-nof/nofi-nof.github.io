@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Nofi</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
+    />
     <link rel="stylesheet" href="../style/stylesheet.css" />
     <style>
       html {
@@ -16,25 +19,33 @@
       .container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        padding: 1% 5% 5%;
       }
-      .title-article-container {
-        display: flex;
-        flex-direction: column;
+      .name-article-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3%;
+        padding-top: 10%;
       }
       .article-container {
         display: grid;
-        font-size: 20px;
-        height: 500px;
+        gap: 3%;
       }
       .article {
         display: flex;
+        align-items: center;
         cursor: pointer;
       }
       .article-link {
         text-decoration: none;
         color: #666666;
+        padding-left: 3%;
       }
-      .title {
+      .article-date {
+        margin: 0;
+        font-size: 14px;
+      }
+      .name {
         display: flex;
         align-items: end;
         justify-content: center;
@@ -48,7 +59,6 @@
       .yukiwa-container {
         position: relative;
         left: 50px;
-        width: 500px;
       }
       .yukiwa-color {
         display: flex;
@@ -73,11 +83,6 @@
         background-image: url(../img/yukiwa_illust_color_line_svg.svg);
         background-size: contain;
         background-repeat: no-repeat;
-      }
-      .x-small {
-        height: 60px;
-        width: 60px;
-        z-index: 0;
       }
       .small {
         height: 120px;
@@ -144,19 +149,19 @@
       <button onclick="switchWritingMode()">活動</button>
     </script> -->
     <div class="container">
-      <div class="title-article-container">
+      <div class="name-article-container">
         <div class="name-container">
           <div class="yukiwa-line small">
-            <p>online name</p>
+            <p>なまえ</p>
           </div>
-          <p class="title">のふぃ</p>
+          <p class="name">のふぃ</p>
         </div>
         <div class="article-container" id="article-container">
           <div class="yukiwa-color small">
-            <p>timeline</p>
+            <p>活動</p>
           </div>
-          <div class="article">
-            <div class="yukiwa-line x-small">
+          <article class="article">
+            <div>
               <img src="../img/zenn-logo-only.svg" height="30px" width="30px" />
             </div>
             <a
@@ -164,31 +169,31 @@
               href="https://zenn.dev/nofi/articles/242dfa8d819e35"
             >
               <p>RemixにFlowbiteを導入してみた</p>
-              <p>2024/05/05</p></a
+              <p class="article-date">2024/05/05</p></a
             >
-          </div>
-          <div class="article">
-            <div class="yukiwa-line x-small">
+          </article>
+          <article class="article">
+            <div>
               <img src="../img/zenn-logo-only.svg" height="30px" width="30px" />
             </div>
             <a
               class="article-link"
               href="https://zenn.dev/nofi/articles/3983b1aabdc1ab"
               ><p>FirestoreでGROUP BYを実現するObject.groupBy</p>
-              <p>2024/07/25</p></a
+              <p class="article-date">2024/07/25</p></a
             >
-          </div>
-          <div class="article">
-            <div class="yukiwa-line x-small">
+          </article>
+          <article class="article">
+            <div>
               <img src="../img/zenn-logo-only.svg" height="30px" width="30px" />
             </div>
             <a
               class="article-link"
               href="https://zenn.dev/nofi/articles/da2c6bb0f2a4d1"
               ><p>道に迷いつつもなんとかFirestoreに入門しました!</p>
-              <p>2024/09/13</p></a
+              <p class="article-date">2024/09/13</p></a
             >
-          </div>
+          </article>
         </div>
       </div>
       <div class="yukiwa-container">
