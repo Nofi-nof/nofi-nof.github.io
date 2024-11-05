@@ -5,7 +5,7 @@
     <title>Nofi</title>
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0 user-scalable=no"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
     />
     <link rel="stylesheet" href="../style/stylesheet.css" />
     <style>
@@ -35,6 +35,10 @@
         display: flex;
         align-items: center;
         cursor: pointer;
+        transition: all 0.3s ease 0s;
+      }
+      .article:hover {
+        transform: translateY(-0.1875em);
       }
       .article-link {
         text-decoration: none;
@@ -59,6 +63,7 @@
       .yukiwa-container {
         position: relative;
         left: 50px;
+        width: 300px;
       }
       .yukiwa-color {
         display: flex;
@@ -108,7 +113,7 @@
         top: 225px;
         left: 210px;
       }
-      .yukiwa-middle1 {
+      .yukiwa-bluesky {
         position: absolute;
         top: 300px;
         left: 138px;
@@ -128,33 +133,82 @@
         top: 540px;
         left: 170px;
       }
+      .logo-small {
+        height: "30px";
+        width: "30px";
+      }
+      .logo-mediun {
+        height: "50px";
+        width: "50px";
+      }
+      .logo-large {
+        height: "200px";
+        width: "170px";
+      }
+      @media screen and (max-width: 480px) {
+        /* 480pxまでの幅の場合に適応される スマホ用*/
+        .container {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+        .yukiwa-container {
+          position: relative;
+          width: 250px;
+        }
+        .small {
+          height: 80px;
+          width: 80px;
+          z-index: 0;
+        }
+        .medium {
+          height: 110px;
+          width: 110px;
+          z-index: 2;
+        }
+        .large {
+          height: 240px;
+          width: 240px;
+          z-index: 1;
+        }
+        .yukiwa-neko {
+          position: absolute;
+          left: 30px;
+        }
+        .yukiwa-x {
+          position: absolute;
+          top: 195px;
+          left: 185px;
+        }
+        .yukiwa-bluesky {
+          position: absolute;
+          top: 270px;
+          left: 138px;
+        }
+        .yukiwa-zenn {
+          position: absolute;
+          top: 330px;
+          left: 30px;
+        }
+        .yukiwa-middle2 {
+          position: absolute;
+          top: 405px;
+          left: 85px;
+        }
+        .yukiwa-github {
+          position: absolute;
+          top: 495px;
+          left: 140px;
+        }
+      }
     </style>
   </head>
   <body>
-    <!-- <script>
-      function switchWritingMode() {
-        const article = document
-          .getElementById("article-container")
-          .addEventListener("click", function () {
-            const articleWritingMode =
-              document.getElementById("article-container").style.writingMode;
-            if (articleWritingMode == "horizontal-tb") {
-              articleWritingMode = "vertical-rl";
-            }
-            if (articleWritingMode == "vertical-rl") {
-              articleWritingMode = "horizontal-tb";
-            }
-          });
-      }
-      <button onclick="switchWritingMode()">活動</button>
-    </script> -->
     <div class="container">
       <div class="name-article-container">
         <div class="name-container">
           <div class="yukiwa-line small">
-            <p>なまえ</p>
+            <p class="name">のふぃ</p>
           </div>
-          <p class="name">のふぃ</p>
         </div>
         <div class="article-container" id="article-container">
           <div class="yukiwa-color small">
@@ -200,25 +254,25 @@
         <div class="yukiwa-color large yukiwa-neko">
           <img src="../img/nekoPC.PNG" height="200px" width="170px" />
         </div>
-        <div class="yukiwa-color-line medium yukiwa-x">
-          <a href="https://twitter.com/Jing_Nofi">
+        <a href="https://twitter.com/Jing_Nofi">
+          <div class="yukiwa-color-line medium yukiwa-x">
             <img src="../img/x-logo-white.png" height="50px" width="50px" />
-          </a>
-        </div>
-        <div class="yukiwa-line small yukiwa-middle1">
-          <a href="https://bsky.app/profile/nofi-nof.bsky.social">
+          </div>
+        </a>
+        <a href="https://bsky.app/profile/nofi-nof.bsky.social">
+          <div class="yukiwa-line small yukiwa-bluesky">
             <img
               src="../img/bluesky-icon.blue.svg"
               height="50px"
               width="50px"
             />
-          </a>
-        </div>
-        <div class="yukiwa-line medium yukiwa-zenn">
-          <a href="https://zenn.dev/nofi">
+          </div>
+        </a>
+        <a href="https://zenn.dev/nofi">
+          <div class="yukiwa-line medium yukiwa-zenn">
             <img src="../img/zenn-logo-only.svg" height="50px" width="50px" />
-          </a>
-        </div>
+          </div>
+        </a>
         <div class="yukiwa-color small yukiwa-middle2"></div>
         <div class="yukiwa-color-line medium yukiwa-github">
           <a href="https://github.com/Nofi-nof">
