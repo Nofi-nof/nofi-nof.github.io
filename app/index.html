@@ -7,7 +7,6 @@
       name="viewport"
       content="width=device-width,initial-scale=1,shrink-to-fit=no"
     />
-    <link rel="stylesheet" href="../style/stylesheet.css" />
     <style>
       html {
         min-height: 100%;
@@ -20,13 +19,15 @@
         display: grid;
         grid-auto-columns: 1fr;
         grid-auto-flow: column;
+        height: auto;
+        width: 100%;
         padding: 3% 10% 5%;
       }
       .name-article-container {
         display: grid;
         grid-template-columns: 1fr;
         gap: 3%;
-        padding: 50px 0;
+        padding: 20px 0;
         width: 100%;
         height: auto;
       }
@@ -63,11 +64,13 @@
         color: #666666;
         padding-left: 3%;
       }
+      .article-title {
+        margin: 0;
+      }
       .article-date {
         margin: 0;
         font-size: 14px;
       }
-
       .yukiwa-container {
         position: relative;
         left: 50px;
@@ -157,10 +160,20 @@
           gap: 50px;
         }
         .yukiwa-container {
-          position: relative;
-          width: 250px;
           height: 650px;
           left: -45px;
+        }
+        .name-article-container {
+          gap: 6%;
+        }
+        .article-container {
+          gap: 8%;
+        }
+        .article {
+          border: none;
+          border-radius: 10px;
+          background-color: gainsboro;
+          padding: 10px;
         }
       }
     </style>
@@ -185,7 +198,7 @@
               class="article-link"
               href="https://zenn.dev/nofi/articles/242dfa8d819e35"
             >
-              <p>RemixにFlowbiteを導入してみた</p>
+              <p class="article-title">RemixにFlowbiteを導入してみた</p>
               <p class="article-date">2024/05/05</p></a
             >
           </article>
@@ -196,7 +209,9 @@
             <a
               class="article-link"
               href="https://zenn.dev/nofi/articles/3983b1aabdc1ab"
-              ><p>FirestoreでGROUP BYを実現するObject.groupBy</p>
+              ><p class="article-title">
+                FirestoreでGROUP BYを実現するObject.groupBy
+              </p>
               <p class="article-date">2024/07/25</p></a
             >
           </article>
@@ -207,7 +222,9 @@
             <a
               class="article-link"
               href="https://zenn.dev/nofi/articles/da2c6bb0f2a4d1"
-              ><p>道に迷いつつもなんとかFirestoreに入門しました!</p>
+              ><p class="article-title">
+                道に迷いつつもなんとかFirestoreに入門しました!
+              </p>
               <p class="article-date">2024/09/13</p></a
             >
           </article>
