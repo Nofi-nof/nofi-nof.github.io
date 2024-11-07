@@ -59,7 +59,8 @@ body {
     height: auto;
 }
 .article {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease 0s;
