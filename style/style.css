@@ -17,7 +17,6 @@ body {
     width: 100%;
     height: auto;
     padding: 3% 15% 5%;
-    box-sizing: border-box;
 }
 .name-article-container {
     display: grid;
@@ -39,6 +38,7 @@ body {
     font-size: 1.2rem;
     color: #666666;
     font-weight: 500;
+    margin: 0;
 }
 .heading-container {
     display: grid;
@@ -50,10 +50,13 @@ body {
 .heading {
     font-size: 1rem;
     color: #666666;
+    margin: 0;
 }
 .article-container {
     display: grid;
     padding: 0 20px;
+    width: 100%;
+    height: auto;
 }
 .article {
     display: flex;
@@ -79,7 +82,7 @@ body {
 }
 .yukiwa-container {
     position: relative;
-    width: 385px;
+    width: 100%;
     height: 690px;
 }
 .yukiwa-color {
@@ -169,18 +172,25 @@ body {
   .container {
     display: flex;
     flex-direction: column-reverse;
-    gap: 50px;
-    padding: 3% 5% 5%;
+    gap: 25px;
+    padding: 3% 0;
+    margin: 0;
   }
   .name-article-container {
-    display: flex;
-    flex-direction: column;
+    grid-template-rows: 1fr 1fr 3fr;
+    gap:0;
+    height: auto;
   }
   .article-container {
     gap: 8%;
-    padding: 5% 0;
+    padding: 5% 2%;
+    width: 97%;
+  }
+  .article-logo {
+    height: auto;
   }
   .article-title {
+    word-break: break-word;
     font-size: 1rem;
     margin: 0;
 }
